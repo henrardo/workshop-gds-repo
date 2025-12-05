@@ -1,6 +1,7 @@
 # Neo4j and GDS
 graphdatascience
 neo4j
+python-dotenv
 
 # Data Science
 pandas

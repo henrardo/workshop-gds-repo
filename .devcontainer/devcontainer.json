@@ -1,10 +1,12 @@
 {
   "name": "Graph Data Science Workshop",
-  "image": "mcr.microsoft.com/devcontainers/python:3.11",
+  "dockerComposeFile": "docker-compose.yml",
+  "service": "app",
+  "workspaceFolder": "/workspaces/${localWorkspaceFolderBasename}",
   
-  "postCreateCommand": "python -m venv .venv && .venv/bin/pip install --upgrade pip && .venv/bin/pip install -r requirements.txt && cp env.template .env 2>/dev/null || true",
+  "postCreateCommand": "bash .devcontainer/setup.sh",
   
-  "postAttachCommand": "echo '\n🚀 Welcome to the Graph Data Science Workshop!\n\n✅ Virtual environment ready at .venv\n✅ All dependencies installed\n\n📝 Next steps:\n   1. Update .env with your Neo4j credentials\n   2. Open notebooks/1_citation_setup.ipynb\n   3. Start learning!\n'",
+  "postAttachCommand": "echo '\nWelcome to the Graph Data Science Workshop!\n\nNeo4j + GDS running at bolt://localhost:7687\nNeo4j Browser available at http://localhost:7474\nVirtual environment ready at .venv\nAll dependencies installed\n\nNext steps:\n   1. Open notebooks/1_citation_setup.ipynb\n   2. Start learning!\n\nCredentials are pre-configured in .env\n'",
   
   "customizations": {
     "vscode": {

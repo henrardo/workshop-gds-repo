@@ -20,11 +20,13 @@ In this module, you'll analyze a real academic citation network using the Python
    [![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://github.com/codespaces/new/henrardo/workshop-gds)
 
 2. Wait for the environment to set up (~2-3 minutes)
-3. Get your Neo4j credentials from your instructor
-4. Update the `.env` file with your credentials
-5. Open `notebooks/1_citation_setup.ipynb` and start coding!
+   - Neo4j with GDS will start automatically
+   - Python environment and dependencies will be installed
+   - Credentials will be auto-configured
 
-**That's it!** All dependencies are pre-installed.
+3. Open `notebooks/1_citation_setup.ipynb` and start coding!
+
+**That's it!** Neo4j + GDS is running locally in your Codespace with everything pre-configured.
 
 ## 🖥️ Local Development Setup
 
@@ -56,7 +58,7 @@ Prefer to work locally? You'll need:
 
 4. Set up environment variables:
    ```bash
-   cp .env.example .env
+   cp env.template .env
    # Edit .env with your Neo4j credentials
    ```
 
@@ -84,16 +86,28 @@ This module uses the **Cora Citation Network**:
 
 ## 🔧 Neo4j Setup
 
-### Option 1: Neo4j Sandbox (Recommended for workshop)
-Your instructor will provide sandbox credentials.
+### GitHub Codespaces (Recommended)
+Neo4j with GDS runs automatically in your Codespace - no setup needed!
 
-### Option 2: Neo4j Aura (Free tier)
+- **Access**: Already running at `bolt://localhost:7687`
+- **Browser**: Open http://localhost:7474 in the Codespace
+- **Credentials**: Auto-configured in `.env` (username: `neo4j`, password: `workshoppassword`)
+
+### Local Development Options
+
+If running locally, you'll need a Neo4j instance:
+
+**Option 1: Neo4j Sandbox**
+- Get credentials from your instructor
+- Update `.env` with provided connection details
+
+**Option 2: Neo4j Aura (Free tier)**
 1. Go to https://neo4j.com/cloud/aura/
 2. Create a free AuraDB instance
 3. Save your credentials
 4. Update `.env` with your URI, username, and password
 
-### Option 3: Local Neo4j Desktop
+**Option 3: Local Neo4j Desktop**
 1. Download from https://neo4j.com/download/
 2. Create a new database (version 5.x)
 3. Install GDS plugin (version 2.x)

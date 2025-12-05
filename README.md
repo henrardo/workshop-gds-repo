@@ -20,13 +20,21 @@ In this module, you'll analyze a real academic citation network using the Python
    [![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://github.com/codespaces/new/henrardo/workshop-gds)
 
 2. Wait for the environment to set up (~2-3 minutes)
-   - Neo4j with GDS will start automatically
+   - Neo4j with GDS and APOC will start automatically
    - Python environment and dependencies will be installed
    - Credentials will be auto-configured
 
-3. Open `notebooks/1_citation_setup.ipynb` and start coding!
+3. Open `notebooks/1_citation_setup.ipynb`
+
+4. **Select the kernel**: Choose "Python (workshop-gds)" from the kernel picker (top-right)
+
+5. Start coding!
 
 **That's it!** Neo4j + GDS is running locally in your Codespace with everything pre-configured.
+
+📚 **New to Codespaces?** See [QUICK-START.md](QUICK-START.md) for step-by-step instructions.
+
+⚠️ **Having issues?** Check [TROUBLESHOOTING.md](TROUBLESHOOTING.md) for solutions.
 
 ## 🖥️ Local Development Setup
 

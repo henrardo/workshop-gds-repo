@@ -6,6 +6,9 @@ python -m venv .venv
 .venv/bin/pip install --upgrade pip
 .venv/bin/pip install -r requirements.txt
 
+echo "Installing Jupyter kernel..."
+.venv/bin/python -m ipykernel install --user --name=workshop-gds --display-name="Python (workshop-gds)"
+
 echo "Configuring Neo4j credentials..."
 cat > .env << EOF
 # Neo4j Connection Credentials
@@ -36,6 +39,10 @@ done
 
 if [ $attempt -eq $max_attempts ]; then
     echo "Warning: Neo4j may not be fully ready yet. Please wait a moment before running notebooks."
+else
+    echo "Verifying APOC and GDS plugins..."
+    sleep 5  # Give Neo4j a bit more time to fully initialize plugins
+    bash .devcontainer/verify-neo4j.sh || echo "Warning: Plugin verification incomplete. Neo4j may still be initializing."
 fi
 
 echo "Setup complete!"

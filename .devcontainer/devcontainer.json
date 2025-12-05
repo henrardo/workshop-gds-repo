@@ -1,0 +1,37 @@
+{
+  "name": "Graph Data Science Workshop",
+  "image": "mcr.microsoft.com/devcontainers/python:3.11",
+  
+  "postCreateCommand": "python -m venv .venv && .venv/bin/pip install --upgrade pip && .venv/bin/pip install -r requirements.txt && cp env.template .env 2>/dev/null || true",
+  
+  "postAttachCommand": "echo '\n🚀 Welcome to the Graph Data Science Workshop!\n\n✅ Virtual environment ready at .venv\n✅ All dependencies installed\n\n📝 Next steps:\n   1. Update .env with your Neo4j credentials\n   2. Open notebooks/1_citation_setup.ipynb\n   3. Start learning!\n'",
+  
+  "customizations": {
+    "vscode": {
+      "settings": {
+        "python.defaultInterpreterPath": "${workspaceFolder}/.venv/bin/python",
+        "python.terminal.activateEnvironment": true,
+        "jupyter.notebookFileRoot": "${workspaceFolder}",
+        "files.exclude": {
+          "**/__pycache__": true,
+          "**/.pytest_cache": true
+        }
+      },
+      "extensions": [
+        "ms-python.python",
+        "ms-toolsai.jupyter",
+        "ms-toolsai.vscode-jupyter-cell-tags",
+        "ms-python.vscode-pylance"
+      ]
+    }
+  },
+  
+  "features": {
+    "ghcr.io/devcontainers/features/common-utils:2": {
+      "installZsh": true,
+      "installOhMyZsh": true,
+      "upgradePackages": true
+    }
+  }
+}
+

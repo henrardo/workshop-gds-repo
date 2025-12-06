@@ -36,7 +36,3 @@ Work through in order:
 3. `3_communities_features.ipynb` - Communities and feature engineering
 4. `4_similarity_prediction.ipynb` - Embeddings and clustering
 
----
-
-Workshop content by Neo4j GraphAcademy
-

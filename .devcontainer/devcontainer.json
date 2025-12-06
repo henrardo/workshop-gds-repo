@@ -6,7 +6,7 @@
   
   "postCreateCommand": "bash .devcontainer/setup.sh",
   
-  "postAttachCommand": "echo '\nWelcome to the Graph Data Science Workshop!\n\nNeo4j + GDS + APOC running at bolt://localhost:7687\nNeo4j Browser available at http://localhost:7474\nVirtual environment ready at .venv\nAll dependencies installed\n\nNext steps:\n   1. Open notebooks/1_citation_setup.ipynb\n   2. Select kernel: Python (workshop-gds) if not auto-selected\n   3. Start learning!\n\nCredentials are pre-configured in .env\n'",
+  "postAttachCommand": "echo '\nNeo4j + GDS running at bolt://localhost:7687\nNeo4j Browser available at http://localhost:7474\nVirtual environment ready at .venv\nAll dependencies installed\n\nNext steps:\n   1. Open notebooks/1_citation_setup.ipynb\n   2. Select kernel: Python (workshop-gds) if not auto-selected\n\n'",
   
   "customizations": {
     "vscode": {
